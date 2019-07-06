@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Play car & snake and stairs </title>
+    <style>
+        /* #background { 
+  background-image: url(https://wildzebraoutdoorplay.co.uk/uploads/3/4/0/5/3405797/3274027_orig.jpg);
+  width:567px;
+  height:567px;
+} */
+table { 
+  width: 540px; 
+  height: 540px;
+  margin:-4% 28%;
+}
+
+.bg-table td{ 
+    border: 2px solid #cb2345;
+}
+td > p {
+  margin-left: 40%;
+}  
+</style>
+
+</head>
+
+<body>
+    <p style="margin-left:73%;"> :یک شماره بین 1 تا 10 وارد کنید و شاهد رقابت باشید </p>
+    <input type="number" onkeyup="Game()" id="demo" style="margin-left: 77%;padding: 5px;background-color: rgb(235, 119, 139) ;border: 1px solid  rgb(241, 193, 193);"> <br>
+     <div id="background">
+       <table class="bg-table">
+            <!-- نقشه شامل صد خانه هست با صد کاراکتر ستاره  -->
+
+            <tr>
+                <td>
+                    <p  id="t1">*</p>
+                </td>
+                <td>
+                    <p  id="t2">*</p>
+                </td>
+                <td>
+                    <p id="t3">*</p>
+                </td>
+                <td>
+                    <p  id="t4">*</p>
+                </td>
+                <td>
+                    <p id="t5">*</p>
+                </td>
+                <td>
+                    <p  id="t6">*</p>
+                </td>
+                <td>
+                    <p  id="t7">*</p>
+                </td>
+                <td>
+                    <p  id="t8">*</p>
+                </td>
+                <td>
+                    <p  id="t9">*</p>
+                </td>
+                <td>
+                    <p  id="t10">*</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p  id="t11">*</p>
+                </td>
+                <td>
+                    <p  id="t12">*</p>
+                </td>
+                <td>
+                    <p  id="t13">*</p>
+                </td>
+                <td>
+                    <p  id="t4">*</p>
+                </td>
+                <td>
+                    <p  id="t15">*</p>
+                </td>
+                <td>
+                    <p  id="t16">*</p>
+                </td>
+                <td>
+                    <p  id="t17">*</p>
+                </td>
+                <td>
+                    <p  id="t18">*</p>
+                </td>
+                <td>
+                    <p  id="t19">*</p>
+                </td>
+                <td>
+                    <p  id="t20">*</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p  id="t21">*</p>
+                </td>
+                <td>
+                    <p  id="t22">*</p>
+                </td>
+                <td>
+                    <p  id="t23">*</p>
+                </td>
+                <td>
+                    <p  id="t24">*</p>
+                </td>
+                <td>
+                    <p  id="t25">*</p>
+                </td>
+                <td>
+                    <p  id="t26">*</p>
+                </td>
+                <td>
+                    <p  id="t27">*</p>
+                </td>
+                <td>
+                    <p  id="t28">*</p>
+                </td>
+                <td>
+                    <p  id="t29">*</p>
+                </td>
+                <td>
+                    <p  id="t30">*</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p  id="t31">*</p>
+                </td>
+                <td>
+                    <p  id="t32">*</p>
+                </td>
+                <td>
+                    <p  id="t33">*</p>
+                </td>
+                <td>
+                    <p  id="t34">*</p>
+                </td>
+                <td>
+                    <p  id="t35">*</p>
+                </td>
+                <td>
+                    <p  id="t36">*</p>
+                </td>
+                <td>
+                    <p  id="t37">*</p>
+                </td>
+                <td>
+                    <p  id="t38">*</p>
+                </td>
+                <td>
+                    <p  id="t39">*</p>
+                </td>
+                <td>
+                    <p  id="t40">*</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p  id="t41">*</p>
+                </td>
+                <td>
+                    <p  id="t42">*</p>
+                </td>
+                <td>
+                    <p  id="t43">*</p>
+                </td>
+                <td>
+                    <p  id="t44">*</p>
+                </td>
+                <td>
+                    <p  id="t45">*</p>
+                </td>
+                <td>
+                    <p  id="t46">*</p>
+                </td>
+                <td>
+                    <p  id="t47">*</p>
+                </td>
+                <td>
+                    <p  id="t48">*</p>
+                </td>
+                <td>
+                    <p  id="t49">*</p>
+                </td>
+                <td>
+                    <p  id="t50">*</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p  id="t51">*</p>
+                </td>
+                <td>
+                    <p  id="t52">*</p>
+                </td>
+                <td>
+                    <p  id="t53">*</p>
+                </td>
+                <td>
+                    <p  id="t54">*</p>
+                </td>
+                <td>
+                    <p  id="t55">*</p>
+                </td>
+                <td>
+                    <p  id="t56">*</p>
+                </td>
+                <td>
+                    <p  id="t57">*</p>
+                </td>
+                <td>
+                    <p  id="t58">*</p>
+                </td>
+                <td>
+                    <p  id="t59">*</p>
+                </td>
+                <td>
+                    <p  id="t60">*</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p  id="t61">*</p>
+                </td>
+                <td>
+                    <p  id="t62">*</p>
+                </td>
+                <td>
+                    <p  id="t63">*</p>
+                </td>
+                <td>
+                    <p  id="t64">*</p>
+                </td>
+                <td>
+                    <p  id="t65">*</p>
+                </td>
+                <td>
+                    <p  id="t66">*</p>
+                </td>
+                <td>
+                    <p  id="t67">*</p>
+                </td>
+                <td>
+                    <p  id="t68">*</p>
+                </td>
+                <td>
+                    <p  id="t69">*</p>
+                </td>
+                <td>
+                    <p  id="t70">*</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p  id="t71">*</p>
+                </td>
+                <td>
+                    <p  id="t72">*</p>
+                </td>
+                <td>
+                    <p  id="t73">*</p>
+                </td>
+                <td>
+                    <p  id="t74">*</p>
+                </td>
+                <td>
+                    <p  id="t75">*</p>
+                </td>
+                <td>
+                    <p  id="t76">*</p>
+                </td>
+                <td>
+                    <p  id="t77">*</p>
+                </td>
+                <td>
+                    <p  id="t78">*</p>
+                </td>
+                <td>
+                    <p  id="t79">*</p>
+                </td>
+                <td>
+                    <p  id="t80">*</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p  id="t81">*</p>
+                </td>
+                <td>
+                    <p  id="t82">*</p>
+                </td>
+                <td>
+                    <p  id="t83">*</p>
+                </td>
+                <td>
+                    <p  id="t84">*</p>
+                </td>
+                <td>
+                    <p  id="t85">*</p>
+                </td>
+                <td>
+                    <p  id="t86">*</p>
+                </td>
+                <td>
+                    <p  id="t87">*</p>
+                </td>
+                <td>
+                    <p  id="t88">*</p>
+                </td>
+                <td>
+                    <p  id="t89">*</p>
+                </td>
+                <td>
+                    <p  id="t90">*</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p  id="t91">*</p>
+                </td>
+                <td>
+                    <p  id="t92">*</p>
+                </td>
+                <td>
+                    <p  id="t93">*</p>
+                </td>
+                <td>
+                    <p  id="t94">*</p>
+                </td>
+                <td>
+                    <p  id="t95">*</p>
+                </td>
+                <td>
+                    <p  id="t96">*</p>
+                </td>
+                <td>
+                    <p  id="t97">*</p>
+                </td>
+                <td>
+                    <p  id="t98">*</p>
+                </td>
+                <td>
+                    <p  id="t99">*</p>
+                </td>
+                <td>
+                    <p  id="t100">*</p>
+                </td>
+            </tr>
+        </table>
+        <div style=" background-color: rgb(47, 197, 115);border: 1px solid rgb(193, 241, 225) ; margin: -5% 72%; width: 25%; height: 20%;">
+            <p id="final" style="margin:0 30%; padding: 10px 0;"></p>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
